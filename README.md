@@ -1,5 +1,5 @@
 # ProjetoSpringJN
-Projeto Java Spring + Postgre
+Projeto Java Spring + PostgreSQL
 
 <h1>   
      <img align="center" width="40px">
