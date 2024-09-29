@@ -6,6 +6,9 @@ import com.mstech.projetospring.infrastructure.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class UsuarioService {
@@ -34,5 +37,13 @@ public class UsuarioService {
 
     public boolean verificaEmailExistente(String email) {
         return usuarioRepository.existsByEmail(email);
+    }
+
+    public List<Usuario> listaUsuario() {
+        return usuarioRepository.findAll();
+    }
+
+    public Optional<Usuario> buscarPorId(Long id) {
+        return usuarioRepository.findById(id);
     }
 }
